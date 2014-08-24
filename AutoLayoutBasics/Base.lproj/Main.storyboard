@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="AutoLayoutBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gkm-T6-SMh">
+                                <rect key="frame" x="225" y="225" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="6Sz-9K-lN2"/>
+                                    <constraint firstAttribute="height" constant="150" id="Q8g-qC-oII"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qeB-ti-opx">
+                                <rect key="frame" x="0.0" y="28" width="600" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="aM8-E0-5SB"/>
+                                </constraints>
+                                <string key="text">1. Always at the Center of the SuperView
+- The Object has fixed Height and Weight</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qeB-ti-opx" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="58n-AO-l89"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qeB-ti-opx" secondAttribute="trailing" constant="-16" id="6hQ-iz-9sh"/>
+                            <constraint firstAttribute="centerX" secondItem="Gkm-T6-SMh" secondAttribute="centerX" id="ECY-OP-sFA"/>
+                            <constraint firstAttribute="centerY" secondItem="Gkm-T6-SMh" secondAttribute="centerY" id="JiI-u4-GoG"/>
+                            <constraint firstItem="qeB-ti-opx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="TC2-ce-fYS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-302" y="37"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Iuw-CM-RG3">
+            <objects>
+                <viewController id="jRH-FJ-i50" customClass="ViewController" customModule="AutoLayoutBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OJt-KK-hT1"/>
+                        <viewControllerLayoutGuide type="bottom" id="woV-Az-6ga"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Srq-Ka-Dpb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAO-cZ-1ho">
+                                <rect key="frame" x="0.0" y="28" width="600" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Qsy-SW-AsD"/>
+                                </constraints>
+                                <string key="text">1. Always at the Center of the SuperView
+- The Object has fixed Width but with flexible Height</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlb-Al-yu5">
+                                <rect key="frame" x="225" y="225" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="JaM-tf-7oS"/>
+                                    <constraint firstAttribute="width" constant="150" id="dqa-mL-vuf"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tlb-Al-yu5" firstAttribute="top" relation="lessThanOrEqual" secondItem="WAO-cZ-1ho" secondAttribute="bottom" constant="149" id="BGS-he-Z8l"/>
+                            <constraint firstAttribute="centerX" secondItem="tlb-Al-yu5" secondAttribute="centerX" id="EBB-Uk-knV"/>
+                            <constraint firstItem="WAO-cZ-1ho" firstAttribute="trailing" secondItem="Srq-Ka-Dpb" secondAttribute="trailingMargin" constant="16" id="IPd-Vu-aLR"/>
+                            <constraint firstAttribute="centerY" secondItem="tlb-Al-yu5" secondAttribute="centerY" id="m7z-8P-vbB"/>
+                            <constraint firstItem="WAO-cZ-1ho" firstAttribute="leading" secondItem="Srq-Ka-Dpb" secondAttribute="leadingMargin" constant="-16" id="nlg-f9-vhf"/>
+                            <constraint firstItem="WAO-cZ-1ho" firstAttribute="top" secondItem="OJt-KK-hT1" secondAttribute="bottom" constant="8" id="qDj-Vy-aJY"/>
+                            <constraint firstItem="woV-Az-6ga" firstAttribute="top" relation="lessThanOrEqual" secondItem="tlb-Al-yu5" secondAttribute="bottom" constant="225" id="xh0-Tc-WpM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ye-Li-vXO" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-302" y="719"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PWm-tK-vPG">
+            <objects>
+                <viewController id="pUt-3B-qDQ" customClass="ViewController" customModule="AutoLayoutBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5y4-wX-kUM"/>
+                        <viewControllerLayoutGuide type="bottom" id="NRg-ws-6cG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Iiw-WH-mF8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srQ-4r-4lQ">
+                                <rect key="frame" x="225" y="225" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="CNE-Ih-ZdN"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="NZc-wk-ScG"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vV3-2w-MdQ">
+                                <rect key="frame" x="0.0" y="28" width="600" height="66"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="yPk-9h-v56"/>
+                                </constraints>
+                                <string key="text">1. Always at the Center of the SuperView
+- The Object has fixed Height but with flexible Width
+- You only see the difference when the width is over 600</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="srQ-4r-4lQ" secondAttribute="trailing" constant="209" id="5Ie-wM-YmV"/>
+                            <constraint firstItem="vV3-2w-MdQ" firstAttribute="leading" secondItem="Iiw-WH-mF8" secondAttribute="leadingMargin" constant="-16" id="OuW-Fg-YD6"/>
+                            <constraint firstItem="vV3-2w-MdQ" firstAttribute="trailing" secondItem="Iiw-WH-mF8" secondAttribute="trailingMargin" constant="16" id="PfM-eT-3lU"/>
+                            <constraint firstItem="vV3-2w-MdQ" firstAttribute="top" secondItem="5y4-wX-kUM" secondAttribute="bottom" constant="8" id="Y1B-aX-h1e"/>
+                            <constraint firstAttribute="centerX" secondItem="srQ-4r-4lQ" secondAttribute="centerX" id="YP6-18-tGK"/>
+                            <constraint firstItem="srQ-4r-4lQ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Iiw-WH-mF8" secondAttribute="leadingMargin" constant="209" id="cQX-Tu-ojE"/>
+                            <constraint firstAttribute="centerY" secondItem="srQ-4r-4lQ" secondAttribute="centerY" id="gp3-60-rZo"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u5j-Yf-rPc" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-302" y="1397"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZhU-aW-DpH">
+            <objects>
+                <viewController id="0Ui-7a-gmj" customClass="ViewController" customModule="AutoLayoutBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a5s-TH-Ogt"/>
+                        <viewControllerLayoutGuide type="bottom" id="idR-Xf-zV7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4XV-eQ-MhC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vx5-a0-R6K">
+                                <rect key="frame" x="225" y="28" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Wzl-DN-9fH"/>
+                                    <constraint firstAttribute="height" constant="150" id="jbl-eD-JhL"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8c-XC-gRL">
+                                <rect key="frame" x="0.0" y="276" width="600" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="4sz-8x-pVZ"/>
+                                </constraints>
+                                <string key="text">2. Always stick to the Top Layout Guide
+- The Object has fixed Height and Weight</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l8c-XC-gRL" firstAttribute="trailing" secondItem="4XV-eQ-MhC" secondAttribute="trailingMargin" constant="16" id="0QG-Mc-r07"/>
+                            <constraint firstAttribute="centerX" secondItem="Vx5-a0-R6K" secondAttribute="centerX" id="J8z-ZE-Je9"/>
+                            <constraint firstItem="Vx5-a0-R6K" firstAttribute="top" secondItem="a5s-TH-Ogt" secondAttribute="bottom" constant="8" id="PjZ-3Y-lfM"/>
+                            <constraint firstAttribute="centerY" secondItem="l8c-XC-gRL" secondAttribute="centerY" id="YW3-K4-zpe"/>
+                            <constraint firstItem="l8c-XC-gRL" firstAttribute="leading" secondItem="4XV-eQ-MhC" secondAttribute="leadingMargin" constant="-16" id="qF6-vh-OSn"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jxw-DI-caC" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="37"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nj7-hE-4dD">
+            <objects>
+                <viewController id="52b-it-9o0" customClass="ViewController" customModule="AutoLayoutBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G4O-0t-yFX"/>
+                        <viewControllerLayoutGuide type="bottom" id="7y2-4r-3eC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GvP-pj-Ep2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dId-HV-uUH">
+                                <rect key="frame" x="225" y="28" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="Q9S-i8-p2G"/>
+                                    <constraint firstAttribute="width" constant="150" id="sqP-Dy-Yt2"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7V-tb-0We">
+                                <rect key="frame" x="0.0" y="276" width="600" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="rvj-XE-aSj"/>
+                                </constraints>
+                                <string key="text">2. Always stick to the Top Layout Guide
+- The Object has fixed Width but with flexible Height</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B7V-tb-0We" firstAttribute="trailing" secondItem="GvP-pj-Ep2" secondAttribute="trailingMargin" constant="16" id="CTc-2F-tJZ"/>
+                            <constraint firstItem="B7V-tb-0We" firstAttribute="top" secondItem="dId-HV-uUH" secondAttribute="bottom" priority="999" constant="98" id="b4v-nr-t7I"/>
+                            <constraint firstItem="B7V-tb-0We" firstAttribute="leading" secondItem="GvP-pj-Ep2" secondAttribute="leadingMargin" constant="-16" id="h8y-95-2CG"/>
+                            <constraint firstAttribute="centerX" secondItem="dId-HV-uUH" secondAttribute="centerX" id="ixx-zV-s3v"/>
+                            <constraint firstItem="dId-HV-uUH" firstAttribute="top" secondItem="G4O-0t-yFX" secondAttribute="bottom" constant="8" id="q7K-wG-vf0"/>
+                            <constraint firstAttribute="centerY" secondItem="B7V-tb-0We" secondAttribute="centerY" id="zXy-KH-Lfk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TXw-e3-b8t" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="719"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4HT-5f-Gds">
+            <objects>
+                <viewController id="0ww-Pt-h9x" customClass="ViewController" customModule="AutoLayoutBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kgw-ZZ-wWY"/>
+                        <viewControllerLayoutGuide type="bottom" id="hkC-DR-zfR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RAQ-le-GRG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suq-d7-Vex">
+                                <rect key="frame" x="225" y="28" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="6Ze-FP-GBO"/>
+                                    <constraint firstAttribute="height" constant="150" id="d8M-vN-BNb"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ML1-DN-QzG">
+                                <rect key="frame" x="0.0" y="276" width="600" height="61"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="YHv-fy-fXG"/>
+                                </constraints>
+                                <string key="text">2. Always stick to the Top Layout Guide
+- The Object has fixed Height but with flexible Width
+- You only see the difference when the width is over 600</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="ML1-DN-QzG" secondAttribute="centerY" constant="-6.5" id="4b1-xx-E4I"/>
+                            <constraint firstAttribute="centerX" secondItem="suq-d7-Vex" secondAttribute="centerX" id="7p8-U5-XI2"/>
+                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="suq-d7-Vex" secondAttribute="trailing" constant="209" id="NXV-Au-HKg"/>
+                            <constraint firstItem="ML1-DN-QzG" firstAttribute="trailing" secondItem="RAQ-le-GRG" secondAttribute="trailingMargin" constant="16" id="R80-8i-RKM"/>
+                            <constraint firstItem="suq-d7-Vex" firstAttribute="leading" relation="lessThanOrEqual" secondItem="RAQ-le-GRG" secondAttribute="leadingMargin" constant="209" id="RRh-6U-9Ii"/>
+                            <constraint firstItem="suq-d7-Vex" firstAttribute="top" secondItem="Kgw-ZZ-wWY" secondAttribute="bottom" constant="8" id="aip-z5-H9F"/>
+                            <constraint firstItem="ML1-DN-QzG" firstAttribute="leading" secondItem="RAQ-le-GRG" secondAttribute="leadingMargin" constant="-16" id="w8J-2h-KZf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yc9-jP-NCu" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="1397"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8Sj-Wp-yyv">
+            <objects>
+                <viewController id="zlP-JL-euh" customClass="ViewController" customModule="AutoLayoutBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w03-pV-GDE"/>
+                        <viewControllerLayoutGuide type="bottom" id="8nP-1g-r2J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E4q-QD-QD4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JmU-nX-fpO">
+                                <rect key="frame" x="0.0" y="276" width="600" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="HLo-ec-tbD"/>
+                                </constraints>
+                                <string key="text">3. Always stick to the Bottom Layout Guide
+- The Object has fixed Height and Weight</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLd-c9-Avj">
+                                <rect key="frame" x="225" y="430" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="d4n-d2-iIt"/>
+                                    <constraint firstAttribute="width" constant="150" id="qmx-ys-sHK"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JmU-nX-fpO" firstAttribute="trailing" secondItem="E4q-QD-QD4" secondAttribute="trailingMargin" constant="16" id="3HC-dE-Ey8"/>
+                            <constraint firstItem="JmU-nX-fpO" firstAttribute="leading" secondItem="E4q-QD-QD4" secondAttribute="leadingMargin" constant="-16" id="6Ph-I8-sjt"/>
+                            <constraint firstItem="8nP-1g-r2J" firstAttribute="top" secondItem="FLd-c9-Avj" secondAttribute="bottom" constant="20" id="I9H-h2-FJ4"/>
+                            <constraint firstAttribute="centerX" secondItem="FLd-c9-Avj" secondAttribute="centerX" id="VeC-XC-20i"/>
+                            <constraint firstAttribute="centerY" secondItem="JmU-nX-fpO" secondAttribute="centerY" id="u3G-1b-0QP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Im1-Rg-LRq" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300" y="37"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uMu-bK-Sj9">
+            <objects>
+                <viewController id="lPL-A6-A7b" customClass="ViewController" customModule="AutoLayoutBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m0b-ka-hCz"/>
+                        <viewControllerLayoutGuide type="bottom" id="vba-3p-b1k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TMG-M1-ykB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OG5-H1-MjM">
+                                <rect key="frame" x="0.0" y="276" width="600" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="VQy-T4-2DH"/>
+                                </constraints>
+                                <string key="text">3. Always stick to the Bottom Layout Guide
+- The Object has fixed Width but with flexible Height</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgv-H5-ziV">
+                                <rect key="frame" x="225" y="430" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="bU4-ts-LHN"/>
+                                    <constraint firstAttribute="width" constant="150" id="zuH-y3-nGx"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="hgv-H5-ziV" secondAttribute="centerX" id="4el-oi-2AI"/>
+                            <constraint firstAttribute="centerY" secondItem="OG5-H1-MjM" secondAttribute="centerY" id="aMt-H7-WJZ"/>
+                            <constraint firstItem="OG5-H1-MjM" firstAttribute="trailing" secondItem="TMG-M1-ykB" secondAttribute="trailingMargin" constant="16" id="agI-UY-TjT"/>
+                            <constraint firstItem="OG5-H1-MjM" firstAttribute="leading" secondItem="TMG-M1-ykB" secondAttribute="leadingMargin" constant="-16" id="hK5-gu-65z"/>
+                            <constraint firstItem="vba-3p-b1k" firstAttribute="top" secondItem="hgv-H5-ziV" secondAttribute="bottom" constant="20" id="hUO-sm-GtZ"/>
+                            <constraint firstItem="hgv-H5-ziV" firstAttribute="top" relation="lessThanOrEqual" secondItem="OG5-H1-MjM" secondAttribute="bottom" priority="999" constant="106" id="q77-CJ-4UE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HxI-lw-GLb" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300" y="721"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fyW-lC-nBw">
+            <objects>
+                <viewController id="U1M-R9-H6Z" customClass="ViewController" customModule="AutoLayoutBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fmU-kU-WEX"/>
+                        <viewControllerLayoutGuide type="bottom" id="3eb-gG-8VA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E1b-Bu-QhK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UIo-Wg-HE6">
+                                <rect key="frame" x="0.0" y="276" width="600" height="65"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="lII-uf-OCW"/>
+                                </constraints>
+                                <string key="text">3. Always stick to the Bottom Layout Guide
+- The Object has fixed Height but with flexible Width
+- You only see the difference when the width is over 600</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZ6-yp-kE2">
+                                <rect key="frame" x="225" y="430" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="kwd-7k-HNJ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="tCN-7G-abt"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3eb-gG-8VA" firstAttribute="top" secondItem="FZ6-yp-kE2" secondAttribute="bottom" constant="20" id="KXy-OM-Ust"/>
+                            <constraint firstItem="FZ6-yp-kE2" firstAttribute="leading" relation="lessThanOrEqual" secondItem="E1b-Bu-QhK" secondAttribute="leadingMargin" constant="209" id="VgB-QZ-PEE"/>
+                            <constraint firstItem="UIo-Wg-HE6" firstAttribute="trailing" secondItem="E1b-Bu-QhK" secondAttribute="trailingMargin" constant="16" id="Xdt-MK-S07"/>
+                            <constraint firstItem="UIo-Wg-HE6" firstAttribute="leading" secondItem="E1b-Bu-QhK" secondAttribute="leadingMargin" constant="-16" id="Y5X-t7-2yU"/>
+                            <constraint firstAttribute="centerX" secondItem="FZ6-yp-kE2" secondAttribute="centerX" id="cAd-4W-N5F"/>
+                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="FZ6-yp-kE2" secondAttribute="trailing" constant="209" id="nmj-Kq-iU3"/>
+                            <constraint firstAttribute="centerY" secondItem="UIo-Wg-HE6" secondAttribute="centerY" constant="-8.5" id="yxl-Y5-CR1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m0b-8C-EFZ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300" y="1399"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2OZ-JN-8K6">
+            <objects>
+                <viewController id="lR1-mO-rFJ" customClass="ViewController" customModule="AutoLayoutBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YuU-kE-yiJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="DCs-Rn-dPt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BKB-0T-uvD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWN-6K-9gx">
+                                <rect key="frame" x="16" y="225" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ZKv-8G-ACt"/>
+                                    <constraint firstAttribute="height" constant="150" id="c99-OU-m54"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYx-nT-FWb">
+                                <rect key="frame" x="0.0" y="28" width="600" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Bfy-i4-fZU"/>
+                                </constraints>
+                                <string key="text">4. Always stick to the Left side of the SuperView
+- The Object has fixed Height and Weight</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gYx-nT-FWb" firstAttribute="top" secondItem="YuU-kE-yiJ" secondAttribute="bottom" constant="8" id="Yh5-2y-e4H"/>
+                            <constraint firstAttribute="centerY" secondItem="TWN-6K-9gx" secondAttribute="centerY" id="bmG-3g-B3V"/>
+                            <constraint firstItem="TWN-6K-9gx" firstAttribute="leading" secondItem="BKB-0T-uvD" secondAttribute="leadingMargin" id="vq4-dK-YSd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gYx-nT-FWb" secondAttribute="trailing" constant="-16" id="wfz-8v-hw7"/>
+                            <constraint firstItem="gYx-nT-FWb" firstAttribute="leading" secondItem="BKB-0T-uvD" secondAttribute="leadingMargin" constant="-16" id="yVc-YW-kN7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5N-lj-9c7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2084" y="39"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EQy-x5-snU">
+            <objects>
+                <viewController id="3Ms-1s-9EF" customClass="ViewController" customModule="AutoLayoutBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GB2-tI-H9i"/>
+                        <viewControllerLayoutGuide type="bottom" id="C2S-fP-jF2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f3A-B1-CZo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wp-JD-xCB">
+                                <rect key="frame" x="16" y="225" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="YTd-Cr-IiV"/>
+                                    <constraint firstAttribute="width" constant="150" id="nrI-pB-U7r"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lqr-qH-sXt">
+                                <rect key="frame" x="0.0" y="28" width="600" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="1dL-em-KRs"/>
+                                </constraints>
+                                <string key="text">4. Always stick to the Left side of the SuperView
+- The Object has fixed Width but with flexible Height</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Wp-JD-xCB" firstAttribute="top" relation="lessThanOrEqual" secondItem="lqr-qH-sXt" secondAttribute="bottom" priority="999" constant="149" id="0Hm-X3-wIo"/>
+                            <constraint firstAttribute="centerY" secondItem="1Wp-JD-xCB" secondAttribute="centerY" id="GND-1Y-gnL"/>
+                            <constraint firstItem="lqr-qH-sXt" firstAttribute="leading" secondItem="f3A-B1-CZo" secondAttribute="leadingMargin" constant="-16" id="Jre-hu-ERC"/>
+                            <constraint firstItem="lqr-qH-sXt" firstAttribute="top" secondItem="GB2-tI-H9i" secondAttribute="bottom" constant="8" id="c1K-sH-jLy"/>
+                            <constraint firstItem="C2S-fP-jF2" firstAttribute="top" relation="lessThanOrEqual" secondItem="1Wp-JD-xCB" secondAttribute="bottom" priority="999" constant="225" id="cC9-Kc-d6y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lqr-qH-sXt" secondAttribute="trailing" constant="-16" id="fR8-bj-twm"/>
+                            <constraint firstItem="1Wp-JD-xCB" firstAttribute="leading" secondItem="f3A-B1-CZo" secondAttribute="leadingMargin" id="vwW-Ra-irJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UHj-IA-D9I" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2084" y="721"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="olm-ng-OA2">
+            <objects>
+                <viewController id="FaX-MB-NeW" customClass="ViewController" customModule="AutoLayoutBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a16-od-EB6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kyp-gW-qjy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iBY-7C-tlb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VzJ-ml-15c">
+                                <rect key="frame" x="16" y="225" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="HBk-YJ-Ka2"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="oIN-f1-1DK"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i2G-t2-BK8">
+                                <rect key="frame" x="0.0" y="28" width="600" height="63"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="DuE-U5-c0r"/>
+                                </constraints>
+                                <string key="text">4. Always stick to the Left side of the SuperView
+- The Object has fixed Height but with flexible Width
+- You only see the difference when the width is over 600</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i2G-t2-BK8" firstAttribute="top" secondItem="a16-od-EB6" secondAttribute="bottom" constant="8" id="HSi-Wr-CJs"/>
+                            <constraint firstItem="VzJ-ml-15c" firstAttribute="leading" secondItem="iBY-7C-tlb" secondAttribute="leadingMargin" id="K39-ss-NS7"/>
+                            <constraint firstAttribute="centerY" secondItem="VzJ-ml-15c" secondAttribute="centerY" id="XlD-8G-Aov"/>
+                            <constraint firstItem="i2G-t2-BK8" firstAttribute="leading" secondItem="iBY-7C-tlb" secondAttribute="leadingMargin" constant="-16" id="dCq-nF-Un4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i2G-t2-BK8" secondAttribute="trailing" constant="-16" id="iTv-uH-v7Y"/>
+                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="VzJ-ml-15c" secondAttribute="trailing" constant="418" id="khb-d8-waX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f0p-ze-iyi" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2084" y="1397"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Acb-RI-Hsa">
+            <objects>
+                <viewController id="E4P-1a-36Z" customClass="ViewController" customModule="AutoLayoutBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Men-xa-yIq"/>
+                        <viewControllerLayoutGuide type="bottom" id="U5G-d1-y34"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WJB-Hc-lHN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bve-Nq-4np">
+                                <rect key="frame" x="0.0" y="28" width="600" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="fx9-7d-pTe"/>
+                                </constraints>
+                                <string key="text">5. Always stick to the Right side of the SuperView
+- The Object has fixed Height and Weight</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrS-Ky-vNl">
+                                <rect key="frame" x="434" y="225" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="CUb-V3-p7Z"/>
+                                    <constraint firstAttribute="width" constant="150" id="sIE-q5-3H9"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bve-Nq-4np" firstAttribute="leading" secondItem="WJB-Hc-lHN" secondAttribute="leadingMargin" constant="-16" id="CeJ-vf-Zp9"/>
+                            <constraint firstItem="xrS-Ky-vNl" firstAttribute="trailing" secondItem="WJB-Hc-lHN" secondAttribute="trailingMargin" id="K15-0n-0pH"/>
+                            <constraint firstAttribute="centerY" secondItem="xrS-Ky-vNl" secondAttribute="centerY" id="OTh-em-g0R"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bve-Nq-4np" secondAttribute="trailing" constant="-16" id="Tgk-QI-fmA"/>
+                            <constraint firstItem="Bve-Nq-4np" firstAttribute="top" secondItem="Men-xa-yIq" secondAttribute="bottom" constant="8" id="a0J-qQ-09o"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i15-bE-eFR" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2794" y="39"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Tan-4i-ZZB">
+            <objects>
+                <viewController id="tnz-v7-ItR" customClass="ViewController" customModule="AutoLayoutBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bJU-oK-TDP"/>
+                        <viewControllerLayoutGuide type="bottom" id="xiF-Xb-8sM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="My0-aT-OKi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JB9-De-4FO">
+                                <rect key="frame" x="0.0" y="28" width="600" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="ub0-dt-ryT"/>
+                                </constraints>
+                                <string key="text">5. Always stick to the Right side of the SuperView
+- The Object has fixed Width but with flexible Height</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7L-f0-OfZ">
+                                <rect key="frame" x="434" y="225" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="ahz-Rc-4n2"/>
+                                    <constraint firstAttribute="width" constant="150" id="dHe-Kc-4Nc"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j7L-f0-OfZ" firstAttribute="trailing" secondItem="My0-aT-OKi" secondAttribute="trailingMargin" id="4n5-bh-skN"/>
+                            <constraint firstItem="j7L-f0-OfZ" firstAttribute="top" relation="lessThanOrEqual" secondItem="JB9-De-4FO" secondAttribute="bottom" constant="149" id="6GF-Wt-Z6e"/>
+                            <constraint firstItem="JB9-De-4FO" firstAttribute="leading" secondItem="My0-aT-OKi" secondAttribute="leadingMargin" constant="-16" id="TpH-s0-o3h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JB9-De-4FO" secondAttribute="trailing" constant="-16" id="U99-Kf-jBZ"/>
+                            <constraint firstItem="JB9-De-4FO" firstAttribute="top" secondItem="bJU-oK-TDP" secondAttribute="bottom" constant="8" id="mpG-KN-J91"/>
+                            <constraint firstAttribute="centerY" secondItem="j7L-f0-OfZ" secondAttribute="centerY" id="uQ3-aa-5xC"/>
+                            <constraint firstItem="xiF-Xb-8sM" firstAttribute="top" relation="lessThanOrEqual" secondItem="j7L-f0-OfZ" secondAttribute="bottom" constant="225" id="zGD-pL-ggJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Lw-uW-hAL" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2794" y="721"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MRS-yc-p2n">
+            <objects>
+                <viewController id="ltQ-Sy-zzH" customClass="ViewController" customModule="AutoLayoutBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3YB-1p-gOj"/>
+                        <viewControllerLayoutGuide type="bottom" id="IbG-wK-RGT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FvY-bi-KtP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAl-m4-Vjg">
+                                <rect key="frame" x="0.0" y="28" width="600" height="61"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="EYH-NV-nPk"/>
+                                </constraints>
+                                <string key="text">5. Always stick to the Right side of the SuperView
+- The Object has fixed Height but with flexible Width
+- You only see the difference when the width is over 600</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDA-1l-nOq">
+                                <rect key="frame" x="434" y="225" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Nc2-la-9ql"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="gM8-Dz-Nnf"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RDA-1l-nOq" firstAttribute="leading" relation="lessThanOrEqual" secondItem="FvY-bi-KtP" secondAttribute="leadingMargin" constant="418" id="Nyz-h0-1oW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FAl-m4-Vjg" secondAttribute="trailing" constant="-16" id="O9C-WU-dFC"/>
+                            <constraint firstItem="RDA-1l-nOq" firstAttribute="trailing" secondItem="FvY-bi-KtP" secondAttribute="trailingMargin" id="OOk-Z6-rOm"/>
+                            <constraint firstAttribute="centerY" secondItem="RDA-1l-nOq" secondAttribute="centerY" id="PcE-OP-KQz"/>
+                            <constraint firstItem="FAl-m4-Vjg" firstAttribute="top" secondItem="3YB-1p-gOj" secondAttribute="bottom" constant="8" id="n9P-SJ-JJJ"/>
+                            <constraint firstItem="FAl-m4-Vjg" firstAttribute="leading" secondItem="FvY-bi-KtP" secondAttribute="leadingMargin" constant="-16" id="yrl-pb-fYo"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pVi-hx-Mu5" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2794" y="1399"/>
+        </scene>
+    </scenes>
+</document>
