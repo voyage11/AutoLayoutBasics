@@ -36,6 +36,12 @@ for one single object in a single view.
 
 For more detail information about Auto Layout on XCode 6, please visit: [How to Use Auto Layout in XCode 6 for iOS 7 and 8 Development](http://mobileoop.com/how-to-use-auto-layout-in-xcode-6-for-ios-7-and-8-development "How to Use Auto Layout in XCode 6 for iOS 7 and 8 Development").
 
-My website/Blog: [MobileOOP - iOS Mobile Application Development, Sharing and Tutorial](http://mobileoop.com/ "MobileOOP - iOS Mobile Application Development, Sharing and Tutorial").
+
+Personal Note
+==============
+Currently, I am working as a [Senior iOS Developer in Singapore](http://mobileoop.com/ "Senior iOS Developer in Singapore"). I might not be free to keep this solution updated. Please check the changes on the latest iOS to make sure that the solutions works well. Thanks.
 
 
+Thanks.
+
+Ricky
