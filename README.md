@@ -34,12 +34,12 @@ So by doing the math, we will have an object with 3 potential sizes in 5 potenti
 positions, so, we will have a total of 3 x 5 = 15 different potential auto layout guides 
 for one single object in a single view.
 
-For more detail information about Auto Layout on XCode 6, please visit: [How to Use Auto Layout in XCode 6 for iOS 7 and 8 Development](http://mobileoop.com/how-to-use-auto-layout-in-xcode-6-for-ios-7-and-8-development "How to Use Auto Layout in XCode 6 for iOS 7 and 8 Development").
+For more detail information about Auto Layout on XCode 6, please visit: [How to Use Auto Layout in XCode 6 for iOS 7 and 8 Development](https://mobileoop.com/how-to-use-auto-layout-in-xcode-6-for-ios-7-and-8-development "How to Use Auto Layout in XCode 6 for iOS 7 and 8 Development").
 
 
 Personal Note
 ==============
-Currently, I am working as a [Senior iOS Developer in Singapore](http://mobileoop.com/ "Senior iOS Developer in Singapore"). I might not be free to keep this solution updated. Please check the changes on the latest iOS to make sure that the solutions works well. Thanks.
+Currently, I am working as a [Senior iOS Developer in Singapore](https://mobileoop.com/ "Senior iOS Developer in Singapore"). I might not be free to keep this solution updated. Please check the changes on the latest iOS to make sure that the solutions works well. Thanks.
 
 
 Thanks.
